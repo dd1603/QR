@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color:  #a1c181;
+}
+.box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 35px;
+    margin: 20px 20px;
+   
+    background-color: #e8ede8;
+    border-radius: 15px;
+    /* transform: translate(-50%,-50%); */
+
+
+}
+.box h4{
+    padding-bottom:  20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d232e;
+}
+.box input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color:  #52796f;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #354f52;
+}
+.box img{  
+    width: 70px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.imgHolder  /*initially imag is not displayed */
+{
+    max-height: 0;  
+    overflow: hidden;
+}
+.imgHolder .showImg /*after pressing qr, imag is displayed*/
+{ 
+    max-height: 70px;
+    
+    }
+    .err    /*shake animation for 0.1 seconds linearly 5 times*/
+    {
+        animation: shake 0.1s linear 5;
+    }
+    @keyframes shake /*this will define how much it will share in x axis*/
+    {
+        0%{
+            transform: translateX(0);
+        }
+        25%{
+            transform: translateX(-5px);
+
+        }
+        50%{
+            transform: translateX(0);
+
+        }
+        75%{
+            transform: translateX(5px);
+
+        }
+        100%{
+            transform: translateX(0);
+
+        }
+    }
